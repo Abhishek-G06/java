@@ -7,8 +7,6 @@ public class sumDigits {
         if (n == 0) {
             return n;
         }
-        int a = (n%10);
-        int s =sum(n/10);
-        return a + s;
+        return (n%10) + sum(n/10);
     }
 }
