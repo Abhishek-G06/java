@@ -1,6 +1,6 @@
 public class factorial {
     public static void main(String[] args) {
-        fact(6);
+        System.out.println(fact(6));
     }
     public static int fact(int n){
         if (n == 1){
@@ -8,7 +8,6 @@ public class factorial {
         
         }
         n *= fact(n-1); 
-        System.out.println(n);
         return n;
     }
 }
