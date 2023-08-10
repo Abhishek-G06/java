@@ -1,6 +1,7 @@
 public class Stream {
     public static void main(String[] args) {
-        skip("","baccabd");
+        //skip("","bacapplecdad");
+        skipC("bacapplecdad");
     }
 
     static void skip(String p, String up){
@@ -14,6 +15,18 @@ public class Stream {
             skip(p, up.substring(1));
         }else{
             skip(p+ch, up.substring(1));
+        }
+    }
+
+    static String skipC( String up){
+        if(up.isEmpty()){
+            return "";
+        }
+
+        if(up.startsWith("apple")){
+            return skipC(up.substring(5));
+        }else{
+            return up.charAt(0) + skipC(up.substring(1));
         }
     }
 }
