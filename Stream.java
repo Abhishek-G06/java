@@ -1,7 +1,7 @@
 public class Stream {
     public static void main(String[] args) {
         //skip("","bacapplecdad");
-        skipC("bacapplecdad");
+        System.out.println(skipC("bacapplecdad"));
     }
 
     static void skip(String p, String up){
