@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class PermutationRecur {
     public static void main(String[] args) {
-        System.out.println(permutationList("","abc"));
+        System.out.println(permutation3("","abc"));
     }
 
     static void permutation(String p, String up){
@@ -42,5 +42,23 @@ public class PermutationRecur {
         }
 
         return ans;
+    }
+
+    // Counting No. of permutations 
+    static int permutation3(String p, String up){
+        if(up.isEmpty()){
+            // System.out.println(p);
+            return 1;
+        }
+        int count = 0;
+        char ch = up.charAt(0);
+
+        for(int i=0; i<= p.length(); i++){
+            String f = p.substring(0, i);
+            String s = p.substring(i, p.length());
+
+            count += permutation3(f+ch+s, up.substring(1)) ;
+        }
+        return count;
     }
 }
