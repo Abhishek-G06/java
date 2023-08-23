@@ -6,6 +6,7 @@ class String1 {
         String s = sc.next() ;
         String p = sc.next() ;
         System.out.print(isMatch(s, p)) ;
+        sc.close();
     }
     
     public static boolean isMatch(String s, String p) {
