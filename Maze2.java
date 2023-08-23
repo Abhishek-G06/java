@@ -3,7 +3,7 @@ import java.util.ArrayList;
 public class Maze2 {
     public static void main(String[] args) {
         //path("",3,3);
-        System.out.println(pathRetDigonal("", 3, 3));
+        System.out.println(pathRetDiagonal("", 3, 3));
     }
     static void path(String p, int r, int c){
         if(r == 1 && c == 1 ){
